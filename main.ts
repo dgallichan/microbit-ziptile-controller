@@ -1,4 +1,12 @@
 radio.setGroup(200)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # . # .
+    . # # . .
+    . # . # .
+    `)
+basic.pause(2000)
 basic.forever(function () {
     radio.sendValue("Red", Math.map(input.compassHeading(), 0, 360, 0, 255))
     radio.sendValue("Green", 0)
